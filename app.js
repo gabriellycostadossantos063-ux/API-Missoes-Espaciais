@@ -1,7 +1,7 @@
 const express = require('espress');
 const missoesRouter = require('./router/missoes.router');
 const setupSwagger = require('./docs/swagger');
-const { setup } = require('swagger-ui-express');
+
 
 const app = express();
 app.use(express.json());

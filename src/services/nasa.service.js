@@ -1,4 +1,4 @@
-const axios = require('axios');
+
 
 async function getApod(date) {
     const apiKey = process.env.NASA_API_KEY || 'DEMO_KEY';
@@ -33,4 +33,4 @@ async function getApod(date) {
 }
   
 
- module.exports = {getApod};
+export {getApod}
