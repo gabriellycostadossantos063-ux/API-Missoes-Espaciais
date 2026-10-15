@@ -88,7 +88,7 @@ Os testes cobrem `/status`, o CRUD de `/missoes` (sucesso, 400 e 404) e `/apod` 
 
 ## 9. Evidências
 ### Testes (npm test com cobertura)
-![Testes](docs/img/testes.png)
+
 
 ### Swagger UI (/api-docs)
 ![Swagger] (docs/img/swagger.png)
