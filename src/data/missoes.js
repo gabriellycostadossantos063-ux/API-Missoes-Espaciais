@@ -32,5 +32,6 @@ let missoes = [
     }
 
     
-]
+];
 
+module.exports = missoes;

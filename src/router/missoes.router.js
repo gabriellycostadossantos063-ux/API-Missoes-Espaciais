@@ -185,4 +185,5 @@ router.get('/apod', async (req, res) => {
     res.status(error.status || 500).json({ erro: error.erro || "Erro", mensagem: error.mensagem });
   }
 });
-export {getApod}
+
+module.exports = router;

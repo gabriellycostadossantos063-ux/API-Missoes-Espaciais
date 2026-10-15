@@ -1,14 +1,12 @@
-const express = require('espress');
-const missoesRouter = require('./router/missoes.router');
-const setupSwagger = require('./docs/swagger');
-
+const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./src/docs/swagger');
+const missoesRouter = require('./src/router/missoes.router');
 
 const app = express();
 app.use(express.json());
 
-setupSwagger(app);
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use('/', missoesRouter);
-app.use((req, res => {
-    res.status(404).json({erro: "Not Found", mensagem: "Rota nao encontrado"})
-}))
-export default app;
+
+module.exports = app;
